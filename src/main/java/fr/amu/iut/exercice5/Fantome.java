@@ -39,8 +39,9 @@ public class Fantome extends Personnage {
 
     @Override
     public void deplacerAGauche() {
-
-
+        if (getLayoutX() >= LARGEUR_PERSONNAGE) {
+            setLayoutX(getLayoutX() - LARGEUR_PERSONNAGE);
+        }
     }
 
     @Override
