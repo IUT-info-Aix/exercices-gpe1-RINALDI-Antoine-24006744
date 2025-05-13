@@ -47,18 +47,22 @@ public class Palette extends Application {
             nbRouge++;
             panneau.setStyle("-fx-background-color: red;");
             label.setText("Rouge " + nbRouge);
+            bas.setStyle("-fx-text-fill: red;");
         });
 
         btnBleu.setOnAction(e -> {
             nbBleu++;
             panneau.setStyle("-fx-background-color: blue;");
             label.setText("Bleu " + nbBleu);
+            bas.setStyle("-fx-text-fill: blue;");
         });
 
         btnVert.setOnAction(e -> {
             nbVert++;
             panneau.setStyle("-fx-background-color: green;");
             label.setText("Vert " + nbVert);
+            bas.setStyle("-fx-text-fill: green;");
+
         });
 
         root = new BorderPane();

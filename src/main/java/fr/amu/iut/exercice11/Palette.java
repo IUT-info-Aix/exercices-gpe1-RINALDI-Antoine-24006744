@@ -41,6 +41,7 @@ public class Palette extends Application {
         texteDuHaut = new Label();
         texteDuHaut.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         BorderPane.setAlignment(texteDuHaut, Pos.CENTER);
+        texteDuBas = new Label();
 
         panneau = new Pane();
         panneau.setPrefSize(400, 200);
@@ -58,6 +59,30 @@ public class Palette extends Application {
         bleu = new Button("Bleu");
 
         /* VOTRE CODE ICI */
+
+        vert.setOnAction(e -> {
+            nbVert++;
+            panneau.setStyle("-fx-background-color: green;");
+            texteDuHaut.setText("Vert choisi " + nbVert + " fois");
+            texteDuBas.setText("Le vert est une jolie couleur !");
+            texteDuBas.setStyle("-fx-text-fill: green;");
+        });
+
+        rouge.setOnAction(e -> {
+            nbRouge++;
+            panneau.setStyle("-fx-background-color: red;");
+            texteDuHaut.setText("Rouge choisi " + nbRouge + " fois");
+            texteDuBas.setText("Le rouge est une jolie couleur !");
+            texteDuBas.setStyle("-fx-text-fill: red;");
+        });
+
+        bleu.setOnAction(e -> {
+            nbBleu++;
+            panneau.setStyle("-fx-background-color: blue;");
+            texteDuHaut.setText("Bleu choisi " + nbBleu + " fois");
+            texteDuBas.setText("Le bleu est une jolie couleur !");
+            texteDuBas.setStyle("-fx-text-fill: blue;");
+        });
 
         boutons.getChildren().addAll(vert, rouge, bleu);
 
